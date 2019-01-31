@@ -1,6 +1,7 @@
 package ru.hei.wallets.wallet.entity;
 
-import ru.hei.wallets.interfaces.WalletItem;
+import org.jetbrains.annotations.NotNull;
+import ru.hei.wallets.wallet.interfaces.WalletItem;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -14,14 +15,14 @@ public class WalletCard
     private Date updated;
     private Map<String, String> metaInfo = new HashMap<>();
 
-    public WalletCard( String name, Date created )
+    public WalletCard( @NotNull String name, @NotNull Date created )
     {
         this.name = name;
         this.created = created;
         this.updated = created;
     }
 
-    public void setUpdated( Date updated )
+    public void setUpdated( @NotNull Date updated )
     {
         this.updated = updated;
     }

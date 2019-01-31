@@ -1,7 +1,8 @@
 package ru.hei.wallets.wallet.entity;
 
-import ru.hei.wallets.interfaces.WalletItem;
-import ru.hei.wallets.interfaces.WalletNode;
+import org.jetbrains.annotations.NotNull;
+import ru.hei.wallets.wallet.interfaces.WalletItem;
+import ru.hei.wallets.wallet.interfaces.WalletNode;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,14 +16,14 @@ public class WalletFolder
     private Date updated;
     private List<WalletItem> children = new ArrayList<>();
 
-    public WalletFolder( String name, Date created )
+    public WalletFolder( @NotNull String name, @NotNull Date created )
     {
         this.name = name;
         this.created = created;
         this.updated = created;
     }
 
-    public void setUpdated( Date updated )
+    public void setUpdated( @NotNull Date updated )
     {
         this.updated = updated;
     }
@@ -48,7 +49,7 @@ public class WalletFolder
         return new ArrayList<>( children );
     }
 
-    public void addFolder( WalletItem node )
+    public void addFolder( @NotNull WalletItem node )
     {
         children.add( node );
     }
