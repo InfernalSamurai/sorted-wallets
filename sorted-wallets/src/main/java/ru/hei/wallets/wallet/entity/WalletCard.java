@@ -1,4 +1,4 @@
-package ru.hei.wallets.entity;
+package ru.hei.wallets.wallet.entity;
 
 import ru.hei.wallets.interfaces.WalletItem;
 

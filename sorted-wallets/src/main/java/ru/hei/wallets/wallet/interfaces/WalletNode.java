@@ -1,4 +1,4 @@
-package ru.hei.wallets.interfaces;
+package ru.hei.wallets.wallet.interfaces;
 
 import java.util.List;
 
