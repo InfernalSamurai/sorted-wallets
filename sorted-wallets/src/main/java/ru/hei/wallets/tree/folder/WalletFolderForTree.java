@@ -1,7 +1,7 @@
 package ru.hei.wallets.tree.folder;
 
-import ru.hei.wallets.tree.card.WalletCardComparator;
 import ru.hei.wallets.tree.card.WalletCardForTree;
+import ru.hei.wallets.tree.comparator.WalletItemByUpdatedComparator;
 import ru.hei.wallets.wallet.entity.WalletCard;
 import ru.hei.wallets.wallet.entity.WalletFolder;
 import ru.hei.wallets.wallet.interfaces.WalletItem;
@@ -45,7 +45,7 @@ public class WalletFolderWithCards
                                        .toLocalDate() )
               .append( System.lineSeparator() );
         getCards().stream()
-                  .sorted( new WalletCardComparator() )
+                  .sorted( new WalletItemByUpdatedComparator() )
                   .forEach( card -> result.append( "    " )
                                           .append( card ) );
 

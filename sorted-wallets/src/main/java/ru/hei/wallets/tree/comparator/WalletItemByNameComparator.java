@@ -1,10 +1,10 @@
-package ru.hei.wallets.tree.folder;
+package ru.hei.wallets.tree.comparator;
 
 import ru.hei.wallets.wallet.interfaces.WalletItem;
 
 import java.util.Comparator;
 
-public class WalletFolderComparator
+public class WalletItemByNameComparator
     implements Comparator<WalletItem>
 {
     @Override

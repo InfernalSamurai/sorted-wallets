@@ -26,7 +26,7 @@ public class WalletTree
 
         getWalletForTree().getFoldersWithSortedCards()
                           .stream()
-                          .sorted( new WalletFolderComparator() )
+                          .sorted( new WalletItemByNameComparator() )
                           .forEach( result::append );
         return result.toString()
                      .trim();
