@@ -1,25 +1,25 @@
 package ru.hei.wallets.tree.wallet;
 
-import ru.hei.wallets.tree.folder.WalletFolderWithCards;
+import ru.hei.wallets.tree.folder.WalletFolderForTree;
 import ru.hei.wallets.wallet.entity.Wallet;
 import ru.hei.wallets.wallet.entity.WalletFolder;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class WalletWithFolders
+public class WalletForTree
     extends Wallet
 {
-    public WalletWithFolders( Wallet wallet )
+    public WalletForTree( Wallet wallet )
     {
         wallet.getChildren()
               .forEach( walletItem -> addFolder( (WalletFolder)walletItem ) );
     }
 
-    public List<WalletFolderWithCards> getFoldersWithSortedCards()
+    public List<WalletFolderForTree> getFoldersWithSortedCards()
     {
         return getChildren().stream()
-                            .map( walletItem -> new WalletFolderWithCards( (WalletFolder)walletItem ) )
+                            .map( walletItem -> new WalletFolderForTree( (WalletFolder)walletItem ) )
                             .collect( Collectors.toList() );
     }
 }

@@ -10,10 +10,10 @@ import java.time.ZoneId;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class WalletFolderWithCards
+public class WalletFolderForTree
     extends WalletFolder
 {
-    public WalletFolderWithCards( WalletFolder folder )
+    public WalletFolderForTree( WalletFolder folder )
     {
         super( folder.getName(), folder.getCreatedDate() );
         super.setUpdated( folder.getUpdatedDate() );

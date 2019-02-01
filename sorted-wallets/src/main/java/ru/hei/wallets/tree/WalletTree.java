@@ -1,8 +1,8 @@
 package ru.hei.wallets.tree;
 
 import org.jetbrains.annotations.NotNull;
-import ru.hei.wallets.tree.folder.WalletFolderComparator;
-import ru.hei.wallets.tree.wallet.WalletWithFolders;
+import ru.hei.wallets.tree.comparator.WalletItemByNameComparator;
+import ru.hei.wallets.tree.wallet.WalletForTree;
 import ru.hei.wallets.wallet.entity.Wallet;
 
 public class WalletTree
@@ -14,9 +14,9 @@ public class WalletTree
         this.wallet = wallet;
     }
 
-    private WalletWithFolders getWalletForTree()
+    private WalletForTree getWalletForTree()
     {
-        return new WalletWithFolders( wallet );
+        return new WalletForTree( wallet );
     }
 
     @Override
