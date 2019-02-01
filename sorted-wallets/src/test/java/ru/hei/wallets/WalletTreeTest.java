@@ -82,7 +82,7 @@ class WalletTreeTest
     }
 
     @Test
-    void cardWithEmptyMap()
+    void cardWithEmptyMapReturnOnlyCardName()
     {
         String indent = "    ";
         String cardName = "testCard";
